@@ -1,0 +1,27 @@
+{
+  "name": "maciejduk",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maciejduk/sites-maciejduk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/maciejduk/sites-maciejduk/issues"
+  },
+  "homepage": "https://github.com/maciejduk/sites-maciejduk#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}
