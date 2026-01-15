@@ -1,0 +1,32 @@
+---
+layout: base.njk
+tags: blog
+siteName: dzi.email
+---
+
+<article class="blog-post">
+  <header class="blog-post-header">
+    <a href="/blog/" class="back-link">← Back to Blog</a>
+    <h1>{{ title }}</h1>
+    <div class="blog-post-meta">
+      <time datetime="{{ date | date('%Y-%m-%d') }}">{{ date | date("%d %B %Y") }}</time>
+      {% if achievement %}
+      <span class="blog-badge">Achievement</span>
+      {% endif %}
+    </div>
+    {% if tags %}
+    <div class="blog-tags">
+      {% for tag in tags %}
+      {% if tag != "blog" %}
+      <span class="tag">{{ tag }}</span>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+  <section class="blog-post-content">
+    {{ content | safe }}
+  </section>
+</article>
+
+{% include "partials/contact.njk" %}

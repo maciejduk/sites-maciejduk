@@ -1,0 +1,26 @@
+<!-- Achievements Section -->
+<section id="achievements" class="achievements-section">
+  <header class="section-header">
+    <h2>Achievements</h2>
+  </header>
+  <article class="achievements-grid">
+    {% for post in collections.blog | sort(attribute='data.order') %}
+    {% if post.data.achievement %}
+    <a href="{{ post.url }}" class="achievement-card">
+      <span class="achievement-date">{{ post.date | date("%b %Y") }}</span>
+      <h3>{{ post.data.title }}</h3>
+      <p>{{ post.data.description }}</p>
+      {% if post.data.tags %}
+      <div class="achievement-tags">
+        {% for tag in post.data.tags %}
+        {% if tag != "blog" %}
+        <span class="tag">{{ tag }}</span>
+        {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+    </a>
+    {% endif %}
+    {% endfor %}
+  </article>
+</section>

@@ -1,0 +1,38 @@
+---
+layout: base.njk
+title: Blog | Maciej Dzierzanowski
+siteName: dzi.email
+---
+
+<!-- Blog Section -->
+<section id="blog" class="blog-section">
+  <header class="section-header">
+    <h2>Blog</h2>
+    <p class="section-subtitle">Technical findings and achievements from my day-to-day work</p>
+  </header>
+  <article class="blog-list">
+    {% for post in collections.blog | reverse %}
+    <a href="{{ post.url }}" class="blog-card{% if post.data.achievement %} blog-card--achievement{% endif %}">
+      <div class="blog-card-header">
+        <span class="blog-date">{{ post.date | date("%d %b %Y") }}</span>
+        {% if post.data.achievement %}
+        <span class="blog-badge">Achievement</span>
+        {% endif %}
+      </div>
+      <h3>{{ post.data.title }}</h3>
+      <p>{{ post.data.description }}</p>
+      {% if post.data.tags %}
+      <div class="blog-tags">
+        {% for tag in post.data.tags %}
+        {% if tag != "blog" %}
+        <span class="tag">{{ tag }}</span>
+        {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+    </a>
+    {% endfor %}
+  </article>
+</section>
+
+{% include "partials/contact.njk" %}
