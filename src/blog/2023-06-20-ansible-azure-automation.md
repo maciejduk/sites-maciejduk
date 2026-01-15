@@ -8,6 +8,7 @@ tags:
   - ansible
   - azure
   - automation
+  - service-now
   - red-hat
   - award
 ---
@@ -29,6 +30,8 @@ Our team was overwhelmed with repetitive Azure-related requests:
 I built and managed an **Ansible Automation Platform** integrated with **ServiceNow** to create a self-service portal for Azure infrastructure. We developed **custom scripts within ServiceNow** to communicate directly with the AAP API, eliminating the need for middleware.
 
 Additionally, I created an **Azure Function App** to handle the approval workflow for requests requiring authorization outside of ServiceNow, secured with **Azure Entra ID** authentication.
+
+The infrastructure included managing **Active Directory** via **Quest PowerShell commandlets** inside secure network. The solution used **Execution Node** inside the secure network communicating back to Ansible Automation Platform, thus not requiring opening of any firewall rules for incoming traffic, providing a **secure channel** to processing Active Directory changes.
 
 ### ServiceNow Integration Flow
 
