@@ -8,6 +8,8 @@ tags:
   - certification
   - linux
   - red-hat
+  - automation
+  - infrastructure
 ---
 
 I'm excited to share that I've successfully passed the **Red Hat Certified Engineer (RHCE)** examination!
